@@ -39,7 +39,7 @@ module Selenium
         #
         # @return [OSS:Bridge, W3C::Bridge]
         #
-        def self.handshake(**opts)
+        def self.handshake(opts)
           desired_capabilities = opts.delete(:desired_capabilities) { Capabilities.new }
 
           if desired_capabilities.is_a?(Symbol)
